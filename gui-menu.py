@@ -9,13 +9,17 @@ from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QWidget
 import sys
 
-# creates an instance of a QApplication
+# create an instance of a QApplication
 app = QApplication(sys.argv)
 
-window = QWidget()
-window.setWindowTitle("Test PyQt5 GUI App")
-window.setGeometry(100,100,200,80)
-window.move(60,15)
-helloMsg QLabel('<h1> Hello World! <h1>', parent=window)
+
+display_window = QWidget()
+display_window.setWindowTitle("Test PyQt5 GUI App")
+display_window.setGeometry(300,300,200,80)
+display_window.move(60,15)
+helloMsg = QLabel('<h1> Hello World! <h1>', parent=window)
 helloMsg.move(60,15)
 
+display_window.show()
+
+sys.exit(app.exec_())
